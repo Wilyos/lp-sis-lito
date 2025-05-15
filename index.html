@@ -31,7 +31,7 @@
         </div>
 
         <section class="hero">
-            <div class="hero-info">
+            <div class="hero-info autoBlur">
                 <div class="hero-info-title">
                     <i class="fa-solid fa-gem"></i>
                      Gerente General
@@ -41,7 +41,7 @@
                 <button><i class="fa-solid fa-paper-plane"></i> Contacta me</button>   
             </div>
             <div class="hero-vid-box">
-                    <video autoplay loop muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
+                    <video  class="autoBlur" autoplay loop muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
             </div>
             <div class="scroll-down">
                 
@@ -49,7 +49,7 @@
 
         </section>
         <section class="info-section">
-            <h1 class="section-title">Hola a todos 👋</h1>
+            <h1 class="section-title autoDisplay">Hola a todos 👋</h1>
             <div class="info-cards">
                 <div class="cards">
                     <h1>Hola, Mi nombre es Fabio Sanchez</h1>
@@ -78,6 +78,75 @@
             </div>
             
         </section>
+
+        <section class="my-projects">
+            <h1 class="section-title autoDisplay">Nuestros Proyectos</h1>
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video id="projectVideo1" src="videos/project1.mp4"></video>
+                    <div class="hover-sign"></div>
+                </div>
+                 <div class="project-info fadeInRight">
+                        <h1>Animated Website</h1>
+
+                        <p>descripcion</p>
+                        <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Web</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video id="projectVideo2" src="videos/project2.mp4"></video>
+                </div>
+                <div class="project-info fadeInRight">
+                        <h1>Animated <span class="gradient">Website</span> </h1>
+                        <p>descripcion</p>
+                        <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Web</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video id="projectVideo3" src="videos/project3.mp4"></video>
+                </div>
+                <div class="project-info fadeInRight">
+                        <h1>Animated Website</h1>
+                        <p>descripcion</p>
+                        <button><i class="fa-solid fa-arrow-up-right-from-square"></i> Web</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h1 class="section-title autoDisplay">Contacta me</h1>
+            <div class="social-box">
+                <a href="#"><i class="fa-solid fa-phone-volume"></i> telefono</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i> email</a>
+                <a href="#"></a>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+
+            <div class="contact-box">
+                <p>texto previo al contacto</p>
+
+                <p>Nombre Completo</p>
+                <input type="text" placeholder="Tu Nombre Completo">
+                <p>Email</p>
+                <input type="text" placeholder="Tu Email">
+                <p>Telefono</p>
+                <input type="text" placeholder="Tu Telefono">
+                <p>Mensaje</p>
+                <input class="input-message"  type="text" placeholder="Tu Mensaje">
+                <button><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+
+            </div>
+        </section>
+
+        <footer>
+            <h1>Copyright &copy; Sistemas Litográficos</h1>
+        </footer>
     </div>
     <script src="app.js"></script>
 </body>

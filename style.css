@@ -5,6 +5,10 @@ body {
     color: lightgray;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -371,32 +375,310 @@ header ul a {
     bottom: 35%;  
 }
 
+/* proyectos */
+
+.my-projects{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    margin: 100px auto 200px auto;
+    height: auto;
+}
+
+.project-card{
+    display: flex;
+    width: 90%;
+    max-width: 950px;
+    height: 40%;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.project-vidbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    position: relative;
+    cursor: pointer;
+    min-width: 320px;
+    max-width: 600px;
+    gap: 24px;
+    transition: 0.5s;
+    mix-blend-mode: exclusion;
+}
+
+.project-vidbox video{
+    object-fit: cover;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.project-vidbox video:hover{
+    box-shadow: 0 0 20px lightgray;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 45%;
+    max-width: 320px;
+    gap: 20px;
+}
+
+.project-info h1{
+    width: 60%;
+    font-size: 38px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    margin-bottom: 10px;
+    margin-top: 0;
+    max-width: 450px;
+}
+
+.project-info p
+{
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.project-info button{
+    padding: 10px 15px;
+    border: 1px solid #3d6e179c;
+    background-color: #2200493d;
+    color: white;
+    border-radius: 10px;
+    box-shadow:  0 0 5px #3d6e17;
+    cursor: pointer;
+}
+
+.project-info button:hover{
+    box-shadow: 0 0 15px #3d6e17;
+    opacity: 0.7;
+}
 
 
+.hover-sign{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100px;
+}
+
+.hover-sign::before,
+.hover-sign::after{
+    content: '👆🏻';
+    text-align: center;
+    position:absolute;
+    font-size: 50px;
+    top: 10%;
+    left: 20%;
+    border-radius: 50%;
+    animation: hoverAnimation 3s ease-in-out infinite;
+}
 
 
+@keyframes hoverAnimation {
+    0%{
+        box-shadow: 0 0 5px lightgray;
+        transform: translate(100%, 50%) rotate(30deg);
+    }
+    100%{
+        box-shadow: 0 0 15px lightgray;
+        transform: translate(70%, 50%) rotate(0deg);
+    }
+    
+}
+
+.hover-sign.active{
+    display: none;
+}
+
+ /* contacto*/
+
+ .contact-section{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    position: relative;
+ }
+
+    .contact-section h1{
+       position: absolute;
+       top: 10%;
+       
+    }
+
+    .social-box {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .social-box a{
+        color: lightgray;
+        text-decoration: none;
+        font-size: 20px;
+        text-wrap: nowrap;
+    }
+
+    .social-box i {
+        color: #45CF23;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .social-icons a i {
+        color : white;
+        margin-top: 40px;
+    }
+
+.contact-box p{
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.contact-box input {
+    padding: 7.5px 30px;
+    background-color: lightgray;
+    width: 80%;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contact-box button{
+    margin-top: 30px;
+    padding: 10px 15px;
+    border: 1px solid #3d6e179c;
+    background-color: #2200493d;
+    color: white;
+    border-radius: 10px;
+    box-shadow:  0 0 5px #3d6e17;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-box button:hover{
+    box-shadow: 0 0 15px #3d6e17;
+    opacity: 0.7;
+}
 
 
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.356);
+    z-index: 999;
+
+}
+
+footer h1{
+    font-size: 30px;
+
+}
 
 
+/* blur abimation effect */
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline:  view();
+}
+
+@keyframes autoBlurAnimation {
+    0%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+    35%, 65%{
+        filter: blur(0);
+        opacity: 1;
+    }   
+    100%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
 
 
+/*AUTO DISPLAY ANIMATION */
+
+.autoDisplay{
+    animation: autoDisplayAnimation both;
+    animation-timeline:  view();
+}
 
 
+@keyframes autoDisplayAnimation {
+    from{
+        filter:blur(10px);
+        transform: translateY(-200px) scale(0);
+        opacity: 0.2;
+
+    }
+    50%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) scale(1);
+    }   
+}
 
 
+/* fade in right */
 
+.fadeInRight{
+    animation: fadeInAnimation  both;
+    animation-timeline:  view();
+}
 
-
-
-
-
-
-
-
-
-
-
+@keyframes fadeInAnimation {
+    0%{
+        transform: translateX(-500px) scale(0.2);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    35%, 65%{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+        filter: blur(0);
+    } 
+    100%{
+        filter: blur(20px);
+    }  
+}
 
 
 
