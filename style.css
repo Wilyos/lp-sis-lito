@@ -906,6 +906,8 @@ to{
     
     .hero{
         flex-direction: column;
+        justify-content: center;
+        gap: 0px;
     }
 
     .autoBlur{
@@ -923,13 +925,13 @@ to{
     }
 
     .hero-vid-box{
-        height: 200px;
-        top: 15%;
-        right: 10%;
+        height: 100px;
+        top: 25%;
+        right: 35%;
     }
 
     .hero-vid-box video {
-        height: 350px;
+        max-height: 200px;
     }
 
     .card video{
