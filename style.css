@@ -200,7 +200,7 @@ header ul a {
 }
 
 .hero-vid-box video{
-    height: 650px;
+    height: 600px;
     mix-blend-mode: difference;
     z-index: -1;
    filter: hue-rotate(280deg);
