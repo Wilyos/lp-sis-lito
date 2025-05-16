@@ -954,6 +954,7 @@ to{
         text-wrap: nowrap;
     }
     .project-info p{
+        font-size: 10px;
         max-width: 300px;
     }
 
