@@ -926,12 +926,12 @@ to{
 
     .hero-vid-box{
         height: 100px;
-        top: 25%;
-        right: 35%;
+        top: 20%;
+        right: 20%;
     }
 
     .hero-vid-box video {
-        max-height: 200px;
+        max-height: 300px;
     }
 
     .card video{
