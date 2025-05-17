@@ -327,6 +327,7 @@ header ul a {
     height: 50%; 
     object-fit: cover;
     mix-blend-mode: lighten;
+    filter: hue-rotate(280deg);
 
 }
 
@@ -934,8 +935,9 @@ to{
         max-height: 300px;
     }
 
-    .card video{
+    .cards video{
         width: 100%;
+        display: block;
     }
 
     .my-projects{
