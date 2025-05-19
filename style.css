@@ -276,9 +276,9 @@ header ul a {
 .info-cards{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-auto-rows: 1fr;
     gap: 20px;
     width: 100%;
+    height: 100%;
     margin-top: 30px;
 }
 .cards{
@@ -287,6 +287,7 @@ header ul a {
     justify-content: center; 
     position: relative;
     width: auto;
+    height: 40vh;
     overflow: hidden;
     border: 1px solid gray;
     background-color: #002002b7;
@@ -303,20 +304,21 @@ header ul a {
 .cards h1{
     position: absolute;
     margin: 0;
-    bottom: 40%;
+    bottom: 45%;
     left: 5%;
     font-size: 25px;
     z-index: 1;
     color: lightgray;
+    
 }
 .cards p
 {
     position: absolute;
-    bottom: 3%;
+    bottom: 0;
     left: 5%;
     z-index: 1;
     max-width: 300px;
-    color:gray;
+    color:rgb(167, 165, 165);
     font-size: 13px;
     line-height: 20px;
 }
@@ -354,25 +356,28 @@ header ul a {
     opacity: 0.7;
 }
 
+.cards:nth-child(1) h1{
+bottom: 30%;
+}
+
 .cards:nth-child(3){
     grid-row: span 2;
-    height: auto;
+    height: 83vh;
 
 }
 
 .cards:nth-child(3) p{
-    bottom: 12%;
+    bottom: 10%;
     
 }
 
 .cards:nth-child(3) h1{
-    bottom: 21%;
+    bottom: 25%;
     
 }
 
 .cards:nth-child(4){
-    grid-row: 2/3;
-    grid-column: 1/3;
+    grid-column: span 2;
     height: auto;
 }
 
@@ -843,8 +848,10 @@ to{
     }
 
     .cards:nth-child(3) h1{
-        bottom: 25%;
+        bottom: 28%;
     }
+
+    .card
 
     .card video{
         height: 65%;
@@ -941,7 +948,22 @@ to{
         width: 100%;
         display: block;
     }
-
+    .cards:nth-child(1){
+        grid-column: span 1;
+        width: auto
+    }
+    .cards:nth-child(2){
+        grid-column: span 1;
+        width: auto;
+    }
+    .cards:nth-child(2) img{
+        max-height: 50%;
+        margin-top: 70px;
+        object-fit: contain;
+    }
+    .cards:nth-child(4){
+       height: 300px;
+    }
     .my-projects{
         margin-bottom: 300px;
     }
